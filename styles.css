@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Press+Start+2P&family=Prompt:wght@300&display=swap');
+:root {
+    --clr-gray100: #f0f7f8;
+    --clr-gray200: #cfd8dc;
+}
+
+body {
+    scroll-behavior: smooth;
+    
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Prompt', sans-serif;
+    cursor: url("rocket.png"),pointer;
+}
+
+body {
+    background-color: var(--clr-gray100);
+}
+
+/* navbar */
+.Logotxt {
+    font-size: 2em;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+.nav-list {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px var(--clr-gray200);
+    margin: 0;
+    padding: 1rem 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 5rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-item img {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.nav-item a:hover {
+    color: rgb(57, 153, 209);
+}
+.nav-item:first-child {
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: 3rem;
+}
+
+.nav-item:first-child:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* left right */
+/* about bootstrap */
+.about-bootstrap {
+    position: relative;
+    min-height: 100vh;
+    /* border: 2px solid black; */
+    /* background-color: #141E61; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.big-logo {
+    width: 40%;
+    height: 70vh;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-logo img {
+    width: 60%;
+    height: 60%;
+}
+
+.what {
+    /* border: 2px solid green; */
+    width: 40%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.what button {
+    opacity: 0;
+    width: 150px;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(100px);
+    transition: 1s;
+}
+
+.what button:hover {
+    transition: 0.5s ease;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(8, 84, 87, 0.3);
+}
+
+.what button[data-scroll="in"]  {
+    transition-delay: 0.5s;
+    transform: translateX(0);
+    opacity: 1;
+}
+.what h1, .left-what h1 {
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    color: #393E46;
+    font-size: 3em;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.what h1[data-scroll="in"], .left-what h1[data-scroll="in"] {
+    transform: scaleX(1);
+}
+
+.what h1[data-scroll="in"]:before, .left-what h1[data-scroll="in"]:before {
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+
+.what h1:before, .left-what h1:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: #9DDFD3;
+    transform-origin: right;
+    transition: 0.5s;
+}
+
+.what h2, .left-what h2{
+    position: relative;
+    margin: 5px 0 0;
+    padding: 0;
+    display: inline-block;
+    color: #393E46;
+    font-size: 2em;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.what h2[data-scroll="in"], .left-what h2[data-scroll="in"] {
+    transform: scaleX(1);
+    transition-delay: 1s;
+}
+
+.what h2[data-scroll="in"]:before, .left-what h2[data-scroll="in"]:before {
+    transform: scaleX(0);
+    transition-delay: 1.5s;
+}
+
+.what h2:before, .left-what h2:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: #e0cca8;
+    transform-origin: right;
+    transition: 0.5s;
+}
+
+
+.what p {
+    font-size: 1.2em;
+    transition: 1s;
+    opacity: 0;
+    color: #393E46;
+}
+
+.what p[data-scroll="in"] {
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+/* right left */
+/* history */
+.history {
+    width: 100%;
+    min-height: 100vh;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.history p {
+    font-size: 1.2em;
+    transition: 1s;
+    opacity: 0;
+}
+
+.history p[data-scroll="in"] {
+    opacity: 1;
+    transition-delay: 1s;
+}
+.left {
+    margin-left: 10em;
+    width: 40%;
+    height: 80vh;
+    /* border: 2px solid black; */
+}
+
+.right {
+    width: 40%;
+    height:67.5vh;
+    /* border: 2px solid black; */
+}
+
+.left h1 {
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    color: #393E46;
+    font-size: 3em;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.left h1[data-scroll="in"] {
+    transform: scaleX(1);
+}
+
+.left h1[data-scroll="in"]:before {
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+
+.left h1:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: #9DDFD3;
+    transform-origin: right;
+    transition: 0.5s;
+}
+
+.left h2{
+    position: relative;
+    margin: 5px 0 0;
+    padding: 0;
+    display: inline-block;
+    color: #393E46;
+    font-size: 2em;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.left h2[data-scroll="in"] {
+    transform: scaleX(1);
+    transition-delay: 1s;
+}
+
+.left h2[data-scroll="in"]:before {
+    transform: scaleX(0);
+    transition-delay: 1.5s;
+}
+
+.left h2:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: #e0cca8;
+    transform-origin: right;
+    transition: 0.5s;
+}
+
+
+.right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right i {
+    font-size: 6em;
+    opacity: 0;
+}
+.right i[data-scroll="in"] {
+    transition: 1.5s;
+    transform: translateX(-20px);
+    opacity: 1;
+}
+
+.fa-twitter {
+    color: rgb(61, 133, 228);
+}
+
+.fa-html5 {
+    color: rgb(255, 72, 0)
+}
+
+.fa-css3-alt {
+    color: rgb(61, 133, 228);
+}
+
+.fa-js-square {
+    color: rgb(235, 178, 21);
+}
+
+/* why */
+.why {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+.left-why {
+    width: 40%;
+    height: 80vh;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-why i {
+    font-size: 10em;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 1s;
+}
+
+.left-why i[data-scroll="in"] {
+    opacity: 1;
+    transition-delay: 1s;
+    transform: scale(1);
+}
+
+.fa-laptop-code {
+    color: rgb(87, 87, 87);
+}
+
+.fa-lightbulb {
+    color: rgb(243, 207, 0);
+}
+
+
+
+.right-why {
+    width: 40%;
+    height: 80vh;
+    /* border: 2px solid black; */
+}
+
+
+.right-why h1 {
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    color: #393E46;
+    font-size: 3em;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.right-why h1[data-scroll="in"] {
+    transform: scaleX(1);
+}
+
+.right-why h1[data-scroll="in"]:before {
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+
+.right-why h1:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: #9DDFD3;
+    transform-origin: right;
+    transition: 0.5s;
+}
+
+.right-why h2{
+    position: relative;
+    margin: 5px 0 0;
+    padding: 0;
+    display: inline-block;
+    color: #393E46;
+    font-size: 2em;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.right-why h2[data-scroll="in"] {
+    transform: scaleX(1);
+    transition-delay: 1s;
+}
+
+.right-why h2[data-scroll="in"]:before {
+    transform: scaleX(0);
+    transition-delay: 1.5s;
+}
+
+.right-why h2:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: #e0cca8;
+    transform-origin: right;
+    transition: 0.5s;
+}
+
+.right-why ul {
+    transition: 1s;
+    font-size: 1.2em;
+    opacity: 0;
+}
+
+.right-why ul[data-scroll="in"] {
+    transition-delay: 1s;
+    opacity: 1;
+}
+
+
+/* what-browser */
+
+.what-browser {
+    min-height: 100vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left-what {
+    margin-left: 10em;
+    width: 40%;
+    height: 80vh;
+    /* border: 2px solid black; */
+}
+
+.left-what p {
+    transition: 1s;
+    font-size: 1.2em;
+    opacity: 0;
+}
+
+.left-what p[data-scroll="in"] {
+    transition-delay: 1s;
+    opacity: 1;
+}
+
+.right-what {
+    margin-right: 5em;
+    width: 40%;
+    height: 80vh;
+    /* border: 2px solid black; */
+}
+
+.right-what img {
+    cursor: not-allowed;
+    width: 100%;
+    height: 100%;
+}
