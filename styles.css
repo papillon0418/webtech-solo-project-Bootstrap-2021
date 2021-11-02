@@ -117,7 +117,7 @@ nav{
     height: 50px;
     border: none;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transform: translateX(100px);
+    transform: translateX(400px);
     transition: 1s;
 }
 
@@ -143,6 +143,7 @@ nav{
     transition: 0.5s;
     transform-origin: left;
     transform: scaleX(0);
+    
 }
 
 .what h1[data-scroll="in"], .left-what h1[data-scroll="in"] {
@@ -164,6 +165,7 @@ nav{
     background-color: #9DDFD3;
     transform-origin: right;
     transition: 0.5s;
+    border-radius: 10px;
 }
 
 .what h2, .left-what h2{
@@ -176,6 +178,7 @@ nav{
     transition: 0.5s;
     transform-origin: right;
     transform: scaleX(0);
+    
 }
 
 .what h2[data-scroll="in"], .left-what h2[data-scroll="in"] {
@@ -198,6 +201,7 @@ nav{
     background-color: #e0cca8;
     transform-origin: right;
     transition: 0.5s;
+    border-radius: 10px;
 }
 
 
@@ -247,7 +251,7 @@ nav{
     /* border: 2px solid black; */
 }
 
-.left h1 {
+.left h1, .used-left h1 {
     font-weight: bold;
     position: relative;
     margin: 0;
@@ -260,16 +264,16 @@ nav{
     transform: scaleX(0);
 }
 
-.left h1[data-scroll="in"] {
+.left h1[data-scroll="in"], .used-left h1[data-scroll="in"]  {
     transform: scaleX(1);
 }
 
-.left h1[data-scroll="in"]:before {
+.left h1[data-scroll="in"]:before, .used-left h1[data-scroll="in"]:before {
     transform: scaleX(0);
     transition-delay: 0.5s;
 }
 
-.left h1:before {
+.left h1:before, .used-left h1:before {
     position: absolute;
     content: "";
     top: 0;
@@ -279,9 +283,10 @@ nav{
     background-color: #9DDFD3;
     transform-origin: right;
     transition: 0.5s;
+    border-radius: 10px;
 }
 
-.left h2{
+.left h2, .used-left h2{
     position: relative;
     margin: 5px 0 0;
     padding: 0;
@@ -293,17 +298,17 @@ nav{
     transform: scaleX(0);
 }
 
-.left h2[data-scroll="in"] {
+.left h2[data-scroll="in"], .used-left h2[data-scroll="in"] {
     transform: scaleX(1);
     transition-delay: 1s;
 }
 
-.left h2[data-scroll="in"]:before {
+.left h2[data-scroll="in"]:before, .used-left h2[data-scroll="in"]:before {
     transform: scaleX(0);
     transition-delay: 1.5s;
 }
 
-.left h2:before {
+.left h2:before,  .used-left h2:before {
     position: absolute;
     content: "";
     top: 0;
@@ -313,6 +318,7 @@ nav{
     background-color: #e0cca8;
     transform-origin: right;
     transition: 0.5s;
+    border-radius: 10px;
 }
 
 
@@ -364,12 +370,14 @@ nav{
     height: 80vh;
     /* border: 2px solid black; */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 .left-why i {
+    margin: 0.3em;
+    /* border: 2px solid black; */
     font-size: 10em;
     opacity: 0;
     transform: scale(0.5);
@@ -379,7 +387,7 @@ nav{
 .left-why i[data-scroll="in"] {
     opacity: 1;
     transition-delay: 1s;
-    transform: scale(1);
+    transform: scale(0.8);
 }
 
 .fa-laptop-code {
@@ -399,7 +407,7 @@ nav{
 }
 
 
-.right-why h1 {
+.right-why h1, .install-right h1 {
     font-weight: bold;
     position: relative;
     margin: 0;
@@ -412,16 +420,16 @@ nav{
     transform: scaleX(0);
 }
 
-.right-why h1[data-scroll="in"] {
+.right-why h1[data-scroll="in"], .install-right h1[data-scroll="in"] {
     transform: scaleX(1);
 }
 
-.right-why h1[data-scroll="in"]:before {
+.right-why h1[data-scroll="in"]:before, .install-right h1[data-scroll="in"]:before {
     transform: scaleX(0);
     transition-delay: 0.5s;
 }
 
-.right-why h1:before {
+.right-why h1:before, .install-right h1:before {
     position: absolute;
     content: "";
     top: 0;
@@ -431,9 +439,10 @@ nav{
     background-color: #9DDFD3;
     transform-origin: right;
     transition: 0.5s;
+    border-radius: 10px;
 }
 
-.right-why h2{
+.right-why h2, .install-right h2{
     position: relative;
     margin: 5px 0 0;
     padding: 0;
@@ -445,17 +454,17 @@ nav{
     transform: scaleX(0);
 }
 
-.right-why h2[data-scroll="in"] {
+.right-why h2[data-scroll="in"], .install-right h2[data-scroll="in"] {
     transform: scaleX(1);
     transition-delay: 1s;
 }
 
-.right-why h2[data-scroll="in"]:before {
+.right-why h2[data-scroll="in"]:before, .install-right h2[data-scroll="in"]:before {
     transform: scaleX(0);
     transition-delay: 1.5s;
 }
 
-.right-why h2:before {
+.right-why h2:before, .install-right h2:before {
     position: absolute;
     content: "";
     top: 0;
@@ -465,6 +474,7 @@ nav{
     background-color: #e0cca8;
     transform-origin: right;
     transition: 0.5s;
+    border-radius: 10px;
 }
 
 .right-why ul {
@@ -519,4 +529,174 @@ nav{
     cursor: not-allowed;
     width: 100%;
     height: 100%;
+}
+
+
+/* using bootstrap */
+.using-bootstrap {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.install-left {
+    margin-left: 10em;
+    width: 40%;
+    height: 80vh;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateX(-100);
+}
+
+
+.install-left[data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1s;
+}
+
+.install-right {
+    width: 40%;
+    height: 80vh;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    /* border: 2px solid black; */
+}
+
+.install-right p,  .install-right li{
+    font-size: 1.2em;
+}
+
+.importcss {
+    /* border: 2px solid black; */
+    width:90%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.npm, .gem {
+    background-color: rgb(231, 227, 227);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    border-radius: 5px;
+    margin: 0.5em;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.csss, .gemmm {
+    background-color: rgb(231, 227, 227);
+    display: flex;
+    align-items: center;
+    width: 120%;
+    height: 80%;
+    border-radius: 5px;
+    overflow-x: visible;
+    margin: 0.8em;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.used-bootstrap {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.used-left {
+    margin-left: 10em;
+    width: 40%;
+    height: 80vh;
+    /* border: 2px solid black; */
+}
+
+.used-left p {
+    font-size: 1.2em;
+    transition: 1s;
+    opacity: 0;
+}
+
+.used-left p[data-scroll="in"] {
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.used-right {
+    transform: scale(0.1);
+    width: 40%;
+    height: 80vh;
+    transition: 1.5s;
+    opacity: 0;
+    /* border: 2px solid black; */
+}
+
+.used-right[data-scroll="in"] {
+    transition-delay: 1s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.used-right img {
+    width: 100%;
+    height: 75%;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.used-right h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* footer */
+#footer {
+    /* border: 2px solid red; */
+    width: 100%;
+    min-height: 15vh;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+
+
+/* exgridsystem */
+#grid {
+    min-height: 300vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.grid-box {
+    width: 80%;
+    height: 80vh;
+    /* border: 2px solid black; */
+}
+
+.grid-box h1{
+    font-weight: bold;
+}
+
+.grid-box p {
+    font-size: 1.2em;
+}
+
+.box-container {
+    width: 100%;
+}
+.box-container img {
+    border-radius: 10px;
+    width: 100%;
+    height: 50vh;
 }
