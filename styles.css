@@ -16,7 +16,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-family: 'Press Start 2P', cursive;
     font-family: 'Prompt', sans-serif;
-    cursor: url("img/rocket.png"),pointer;
+    /* cursor: url("img/rocket.png"),pointer; */
 }
 
 body {
@@ -122,17 +122,23 @@ nav{
     transition: 1s;
 }
 
+.what button a {
+    text-decoration: none;
+}
+
 .what button:hover {
     transition: 0.5s ease;
     transform: scale(1.05);
     box-shadow: 0px 8px 15px rgba(8, 84, 87, 0.3);
 }
 
+
 .what button[data-scroll="in"]  {
     transition-delay: 0.5s;
     transform: translateX(0);
     opacity: 1;
 }
+
 .what h1, .left-what h1 {
     font-weight: bold;
     position: relative;
@@ -753,6 +759,18 @@ nav{
     
 }
 
+.carousel-inner {
+    opacity: 0;
+    transform: scale(0.1);
+    transition: 1s;
+}
+
+.carousel-inner[data-scroll="in"] {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 1s;
+}
+
 .box-container-card {
     border-radius: 10px;
     display: flex;
@@ -874,10 +892,56 @@ nav{
     /* border: 2px solid black; */
 }
 
+
+.example-left h1{
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    color: #393E46;
+    font-size: 3em;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.example-left h1[data-scroll="in"] {
+    transform: scaleX(1);
+}
+
+.example-left h1[data-scroll="in"]:before {
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+
+.example-left h1:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: #FF8243;
+    transform-origin: right;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+
 .example-left button {
+    transition: 1s;
+    opacity: 0;
     /* border: none; */
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
+    transform: translateX(-100px);
+}
+
+.example-left button[data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.5s;
 }
 
 .example-left a {
@@ -887,15 +951,34 @@ nav{
 
 
 .example-left img {
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(-100px);
     border-radius: 10px;
     width: 100%;
     height: 55%;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
+
+.example-left img[data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1s;
+}
+
 .example-right {
+    transition: 1s;
+    opacity: 0;
     width: 40%;
     height: 80vh;
+    transform: translateX(100px);
     /* border: 2px solid black; */
+}
+
+.example-right[data-scroll="in"] {
+    transition-delay: 1s;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .example-right p {
@@ -972,6 +1055,7 @@ nav{
 
 .mycontact a:hover{
     color:#FFBE0F;
+    transform: scale(1.2);
 }
 
 .namebox p {
@@ -991,6 +1075,16 @@ nav{
     font-weight: bold;
     color: #fff;
 }
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 1500px) {
     .nav-item label {
@@ -1012,9 +1106,3 @@ nav{
 
 
 
-/* @media only screen and (max-width: 1150px) {
-
-    .nav-item {
-        margin: 0 20px;
-    }
-} */
