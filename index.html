@@ -16,7 +16,7 @@
     <title>Webtech Solo Project</title>
 </head>
 
-<body>
+<body oncontextmenu="return false">
     <nav id="navbar">
         <ul class="nav-list">
             <li class="nav-item">
@@ -66,7 +66,6 @@
                 <br>
                 <button><a href="https://getbootstrap.com/">อ่านเพิ่มเติม</a></button>
             </div>
-
         </div>
     </section>
     <section id="history" class="history">
@@ -501,10 +500,14 @@
             <div class="wrapnamebox">
                 <div class="namebox">
                     <P><i class="fas fa-copyright"></i>&nbsp;&nbsp;VISALCOOLCOOL</P>
-                    <h1>I'm Visal Suwanarat</h1>
-                    <h2>63070158</h2>
+                    <div class="typewriter">
+                        <h1>I'm Visal Suwanarat</h1>
+                    </div>
+                    <div class="typewriter">
+                        <h2>63070158</h2>
+                    </div>
                     <br>
-                    <p>FRONT-END DEVELOPER | UX/UI DESIGNER</p>
+                    <p>FONT-END DEVELOPER | UX/UI DESIGNER</p>
                 </div>
                 <br><br>
                 <div class="mycontact">
@@ -519,13 +522,15 @@
             
         </div>
     </section>
+    
 </body>
-
 <script src="js/scroll-out.js"></script>
 <script type="text/javascript">
     ScrollOut({
-        targets: 'h1, h2, p, i, ul, button, img,  div, section'
+        targets: 'h1, h2, p, i, ul, button, img,  div, section, a'
     })
 </script>
+
+
 
 </html>
