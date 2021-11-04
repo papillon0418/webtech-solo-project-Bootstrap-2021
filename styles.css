@@ -1146,3 +1146,30 @@ nav{
     from, to { border-color: transparent }
     50% { border-color: #28FFBF}
 }
+
+.ref{
+    width: 70%;
+    height: 10vh;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ref a {
+    font-size: 1em;
+    text-decoration: none;
+    color: #fff;
+}
+
+.ref a:hover {
+    color:#FFBE0F;
+    transform: scale(1.2);
+    font-weight: 600;
+}
+
+.wrapnamebox p{
+    font-size: 1.2em;
+    color: #fff;
+}
