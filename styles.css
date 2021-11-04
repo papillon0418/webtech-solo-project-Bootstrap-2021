@@ -101,6 +101,7 @@ nav{
 .big-logo img {
     width: 60%;
     height: 60%;
+    opacity: 1;
 }
 
 .what {
@@ -1042,7 +1043,6 @@ nav{
 .mycontact {
     width: 50%;
     height: 10vh;
-    /* border: 2px solid red; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -1065,13 +1065,14 @@ nav{
     letter-spacing: 5px;
 }
 .namebox h1 {
-    font-size: 8em;
+    font-size: 6em;
     font-weight: bold;
     color: #fff;
 }
 
 .namebox h2 {
-    font-size: 5em;
+    letter-spacing: 3px;
+    font-size: 3em;
     font-weight: bold;
     color: #fff;
 }
@@ -1097,3 +1098,51 @@ nav{
 
 
 
+
+
+.typewriter h1, .typewriter h2 {
+    color: #fff;
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    transition: 1s;
+    opacity: 0;
+}
+
+.typewriter h1[data-scroll="in"] {
+    color: #fff;
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.typewriter h2[data-scroll="in"] {
+    color: #fff;
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+} 
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #28FFBF}
+}
